@@ -1,0 +1,22 @@
+{
+    "dependencies": {
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "nodemon": "^3.0.1",
+        "oracledb": "^6.2.0"
+    },
+    "name": "510-assignment-9",
+    "version": "1.0.0",
+    "main": "node index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "run": "nodemon index.js",
+        "build": "webpack"
+    },
+    "engines": {
+        "node": ">=16.9.0"
+    },
+    "author": "Eldoss ",
+    "license": "ISC",
+    "description": ""
+}

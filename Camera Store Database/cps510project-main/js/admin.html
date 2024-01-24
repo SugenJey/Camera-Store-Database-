@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<body>
+
+    <button onclick="fetchData('http://localhost:3000/drop')">Drop Tables</button>
+    <button onclick="fetchData('http://localhost:3000/create')">Create Tables</button>
+    <button onclick="fetchData('http://localhost:3000/populate')">Populate Tables</button>
+
+    <br><br>
+
+    <label for="result">Result:</label>
+    <p id="result"></p>
+
+    <script>
+        function fetchData(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Data:', data);
+                    
+                    // Display the data in the label
+                    document.getElementById('result').textContent = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+
+                    // Display the error in the label
+                    document.getElementById('result').textContent = 'Error: ' + error.message;
+                });
+        }
+    </script>
+
+</body>
+</html>
